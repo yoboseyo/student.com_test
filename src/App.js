@@ -25,8 +25,8 @@ class App extends Component {
               <Pages />
             </Content>
           </Layout>
-          <BackTop visibilityHeight={50} target={() => document.getElementById('scroll-wrap')}>
-            <Button type="primary">
+          <BackTop visibilityHeight={200} target={() => document.getElementById('scroll-wrap')}>
+            <Button className="back-to-top" type="primary">
               <i className="anticon anticon-up"></i>
             </Button>
           </BackTop>
