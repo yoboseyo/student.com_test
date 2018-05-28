@@ -1,0 +1,163 @@
+body{
+  overflow: hidden;
+}
+// page
+.header{  // header
+  h1{
+    width: 200px;
+    height: 32px;
+    float: left;
+    margin: 16px 0 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: transparent;
+    background: url('./static/images/icon-logo.svg') left center no-repeat;
+    background-size: contain;
+  }
+  .log_out{
+    float: right;
+    margin: 22px 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    &:focus{
+      text-decoration: none;
+    }
+  }
+}
+.content-wrap{
+  height: calc(100vh - 64px);
+}
+.slider_nav{
+  padding-top: 44px;
+  height: 100%;
+  .link{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    .iconfont{
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    .collapsed-label{
+      display: block;
+      width: 0;
+      height: 0;
+    }
+  }
+  .ant-menu-inline-collapsed{
+    .link{
+      .iconfont{
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.content{  // content
+  padding: 24px 40px 32px;
+}
+.container{
+  position: relative;
+  min-height: calc(100% - 64px);
+  margin: 0 auto;
+  .page-title{
+    height: 48px;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 48px;
+    font-weight: bold;
+  }
+}
+
+// reset ant
+.ant-btn-lg{
+  padding: 0 24px;
+}
+.ant-menu-inline,
+.ant-menu-vertical{
+  border-right: none;
+  .ant-menu-item{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 17px;
+    &:not(:last-child){
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 17px;
+    }
+    &:after{
+      left: 0;
+      right: inherit;
+      border-left: 4px solid #fcce01;
+      border-right: none;
+    }
+  }
+  .ant-menu-item-selected{
+    &:after{
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+}
+.ant-menu-inline-collapsed{
+  width: 50px;
+  > .ant-menu-item{
+    padding: 0 10px!important;
+  }
+}
+.ant-layout-sider-trigger{
+  height: 44px;
+  line-height: 44px;
+  color: #e7e7e7;
+  background-color: transparent;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+    transform: scaleX(0.8);
+  }
+}
+.ant-table{
+  .ant-table-thead{
+    > tr{
+      &:first-child{
+        th{
+          &:first-child{
+            border-top-left-radius: 0;
+          }
+          &:last-child{
+            border-top-right-radius: 0;
+          }
+        }
+      }
+      > th{
+        padding: 8px 16px;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 16px;
+        color: #63656a;
+        &:first-child{
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+// 404
+.no-match{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  transform: translateY(-50%);
+}
