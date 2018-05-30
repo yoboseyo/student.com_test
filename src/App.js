@@ -16,7 +16,6 @@ class App extends Component {
       <div className="App">
         <Layout style={{ minHeight: '100vh' }}>
           <Header className="header">
-            <h1>STUDENT.COM</h1>
             <a className="log_out" href="javascript:;">Log out</a>
           </Header>
           <Layout className="content-wrap">
